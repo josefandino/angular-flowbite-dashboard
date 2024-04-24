@@ -17,7 +17,9 @@ import { components } from './common/components';
   standalone: true,
   imports: [
     CommonModule, RouterOutlet, RouterModule, 
-    DarkThemeToggleComponent, NavbarComponent, SidebarComponent, SidebarItemGroupComponent, SidebarItemComponent],
+    DarkThemeToggleComponent, NavbarComponent, SidebarComponent, 
+    SidebarItemGroupComponent, SidebarItemComponent
+  ],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })

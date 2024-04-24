@@ -13,8 +13,6 @@ import { CommonModule } from '@angular/common';
 export default class AuthComponent {
 
   firebaseService = inject(AuthService);
-  
-
 
   form = new FormGroup({
     email: new FormControl('', [Validators.required, Validators.email]),
