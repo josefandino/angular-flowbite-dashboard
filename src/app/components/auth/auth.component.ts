@@ -30,12 +30,12 @@ export default class AuthComponent {
     if (this.form.valid) {
 
 
-      this.firebaseService.signIn(this.form.value as User)
-        .then(resp => {
+      // this.firebaseService.signIn(this.form.value as User)
+      //   .then(resp => {
           
-          console.log('___', resp)
+      //     console.log('___', resp)
 
-        })
+      //   })
     }
   }
 

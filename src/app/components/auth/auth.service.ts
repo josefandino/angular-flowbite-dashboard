@@ -1,7 +1,7 @@
 import { Injectable, inject } from '@angular/core';
-import { AngularFireAuth } from '@angular/fire/compat/auth';
-import { AngularFirestore } from '@angular/fire/compat/firestore';
-import { getAuth, signInWithEmailAndPassword, createUserWithEmailAndPassword, updateProfile, sendPasswordResetEmail } from 'firebase/auth';
+// import { AngularFireAuth } from '@angular/fire/compat/auth';
+// import { AngularFirestore } from '@angular/fire/compat/firestore';
+// import { getAuth, signInWithEmailAndPassword, createUserWithEmailAndPassword, updateProfile, sendPasswordResetEmail } from 'firebase/auth';
 import { User } from './user.model';
 import { Router } from '@angular/router';
 @Injectable({
@@ -9,27 +9,27 @@ import { Router } from '@angular/router';
 })
 export class AuthService {
 
-  auth = inject(AngularFireAuth);
-  firestore = inject(AngularFirestore);
+  // auth = inject(AngularFireAuth);
+  // firestore = inject(AngularFirestore);
   router = inject(Router);
   // utilsService = inject(UtilsService);
   // dataRef: AngularFirestoreCollection<User>;
 
 
   getAuth() {
-    return getAuth();
+    // return getAuth();
   }
 
   signIn(user: User) {
-    return signInWithEmailAndPassword(getAuth(), user.email, user.password);
+    // return signInWithEmailAndPassword(getAuth(), user.email, user.password);
   }
 
   signUp(user: User) {
-    return createUserWithEmailAndPassword(getAuth(),  user.email, user.password);
+    // return createUserWithEmailAndPassword(getAuth(),  user.email, user.password);
   }
   
   updateUser(displayName: any) {
-    return updateProfile(getAuth().currentUser, {displayName} );
+    // return updateProfile(getAuth().currentUser, {displayName} );
   }
 
   // setDocument(path: any, data: any) {
@@ -40,12 +40,12 @@ export class AuthService {
   //   return (await getDoc(doc(getFirestore(), path))).data()
   // }
 
-  sendRecoveryEmail(email: string) {
-    return sendPasswordResetEmail(getAuth(), email);
-  }
+  // sendRecoveryEmail(email: string) {
+  //   return sendPasswordResetEmail(getAuth(), email);
+  // }
 
   signOut() {
-    getAuth().signOut();
+    // getAuth().signOut();
     localStorage.removeItem('user');
     this.routerlink('/auth');
   }

@@ -3,11 +3,11 @@ import { provideRouter, withHashLocation } from '@angular/router';
 
 import { routes } from './app.routes';
 import { HttpClientModule } from '@angular/common/http';
-import { AngularFireModule } from '@angular/fire/compat';
-import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
+// import { AngularFireModule } from '@angular/fire/compat';
+// import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 
 // import { provideHttpClient } from '@angular/common/http';
-import { initializeApp } from 'firebase/app'
+// import { initializeApp } from 'firebase/app'
 const firebaseConfig = {
   apiKey: "AIzaSyDsvY0xx_TtTV-t57QjX96vWTvN2S-TFoY",
   authDomain: "login-f267c.firebaseapp.com",
@@ -18,13 +18,13 @@ const firebaseConfig = {
   appId: "1:830826757618:web:3926937a926bc36ea0bf6b"
 };
 
-initializeApp(firebaseConfig);
+// initializeApp(firebaseConfig);
 
 export const appConfig: ApplicationConfig = {
   providers: [provideRouter(routes, withHashLocation()),    
   importProvidersFrom(
     HttpClientModule,
-    AngularFireModule.initializeApp(firebaseConfig),
-    AngularFirestoreModule
+    // AngularFireModule.initializeApp(firebaseConfig),
+    // AngularFirestoreModule
   ) ]
 };
